@@ -9,10 +9,40 @@
 
 			var boid, boids;
 
-			var stats;
+			// var stats;
 
+			var amountOfTweets, tweetNumber;
+
+			tweetThis();
 			init();
 			animate();
+
+
+			// John R - Twitter Function (pull out a random Tweet)
+			function tweetThis(){
+
+				// Here is an array of fakeTweets. We can pull in from a real source later
+				var fakeTweets = ["yo","go","mo","yoyo","gogo","momo","yoyoyo","gg=ogogoog"];
+
+				// store the total number of tweets. We use this to determine the number of birds later on
+				amountOfTweets = fakeTweets.length;
+				
+				// Pick a random tweet from our array
+				function pickRandomTweet() {
+					// Store tweetNumber so we can change which bird is highlighted
+					tweetNumber = Math.floor(Math.random() * fakeTweets.length);
+					var randomTweet = fakeTweets[tweetNumber];
+					// Log the random tweet. Finished app should display the Tweet on-screen instead
+					console.log(randomTweet);
+				}
+
+				// Display new tweet every 5 seconds...
+				setInterval(pickRandomTweet, 5000);
+
+			}
+			
+			
+
 
 			function init() {
 
@@ -24,7 +54,7 @@
 				birds = [];
 				boids = [];
 
-				for ( var i = 0; i < 25; i ++ ) {
+				for ( var i = 0; i < amountOfTweets; i ++ ) {
 
 					boid = boids[ i ] = new Boid();
 					boid.position.x = Math.random() * 400 - 200;
@@ -94,7 +124,8 @@
 					bird = birds[ i ];
 
 					color = bird.material.color;
-					color.r = color.g = color.b = ( 500 - bird.position.z ) / 1000;
+					color.r = color.g = color.b = 255;
+					bird.material.opacity = 0.5;
 
 					bird.rotation.y = Math.atan2( - boid.velocity.z, boid.velocity.x );
 					bird.rotation.z = Math.asin( boid.velocity.y / boid.velocity.length() );
@@ -104,13 +135,14 @@
 
 				}
 
-				// Change colour of selected bird
-				highlightBird =	birds[2].material.color;
-				highlightBird.r = 255;
+				// John R: Change colour of currently selected tweet bird
+				highlightBird =	birds[tweetNumber].material.color;
+				highlightBird.r = 0;
 				highlightBird.g = 0;
-				highlightBird.b = 0;
-				
+				highlightBird.b = 255;
 
 				renderer.render( scene, camera );
 
+
 			}
+				
