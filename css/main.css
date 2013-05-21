@@ -25,7 +25,9 @@
 
 
 
-
+.tweet-stream blockquote {
+	float:left;
+}
 
 
 
