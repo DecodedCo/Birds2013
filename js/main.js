@@ -25,7 +25,29 @@ $('#video').click(function(){
 	fullScreenVideo('.video-stream');
 })
 
+    $.getJSON('/Birds2013/nodejs/datafinal.json', function(data) {
+        $.each(data, function(index) {
+            //alert(data[index].TEST1);
+            //alert(data[index].TEST2);
+        });
+    });
+/*
+$('#tweet-list .tweet').css('opacity',0);
+$('#tweet-list .tweet').each(function(i){
+    var $twt = $(this);
+    setTimeout(function () { 
+    	iterateTweets($twt); 
+    }, 5000 * (i + 1));	
+    $('#tweet-list').append($twt);
+})
 
+function iterateTweets($container) {
+	$container.animate({
+		'opacity':1
+	},1000).delay(5000).animate({
+		'opacity': 0
+	})	
+}*/
 
 
 })

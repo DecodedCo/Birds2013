@@ -11,11 +11,11 @@ var twitter = new Twitter({
 
 var jsonObject = {};
 
-twitter.get('search/tweets',{q: 'birds2013'}, function(err, data) {
+twitter.get('search/tweets',{q: '#birds2013'}, function(err, data) {
     for (var i in data.statuses) {
-        //console.log(data.statuses[i].text);
-        var twitterID = data.statuses[i].id;
-        jsonObject[twitterID] = null;
+        console.log(data.statuses[i]);
+        var twitterID = data.statuses[i].id_str;
+        jsonObject[i] = twitterID;
     }
     var newData = JSON.stringify(jsonObject);
     fs.writeFile('./data.json', newData, function(error){
@@ -24,6 +24,9 @@ twitter.get('search/tweets',{q: 'birds2013'}, function(err, data) {
     });
 });
 
+
+
+/*
 // Read the data store
 fs.readFile('./data.json', function(error, json){
     // Log any errors
@@ -31,23 +34,30 @@ fs.readFile('./data.json', function(error, json){
     // Get the JSON contents and ensure it's JSON
 
     var existingData = JSON.parse(json);
-   // console.log(existingData[0]);
+    console.log(existingData);
     // If already in list, increment checkinCount
 
-    
-
     for (var item in existingData) {
-        if(existingData.hasOwnProperty(item)) {
-             
-            twitter.get('statuses/oembed',{id: item},function(err,data){
-                embedTweets[item] = data;
-              
-            })
-        }
-    }
-    console.log(embedTweets);
+        // existingDate[item] = key
+        // item = value
+
+        twitter.get('statuses/oembed',{id: item},function(err,data){
+            console.log(err);
+            if(data != null && typeof data === 'object') {
+                existingData[item] = data;
+            } else {
+                existingData[item] = 'crap';
+            }
+        })
+
+    } 
+
+    setInterval(function(){
+        console.log(existingData)
+    },5000)
 
 });
+*/
 
 
 

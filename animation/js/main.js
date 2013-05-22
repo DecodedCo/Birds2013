@@ -12,17 +12,38 @@
 			// var stats;
 
 			var amountOfTweets, tweetNumber;
+			var realTweets = [];
 
-			tweetThis();
-			init();
+			    $.getJSON('/Birds2013/nodejs/data.json', function(data) {
+			        $.each(data, function(index) {
+			            //alert(data[index]);
+			            //alert(data[index].TEST2);
+			            realTweets.push(data[index])
+			        });
+
+			        
+			        tweetThis(realTweets);
+			        init();
+			    });
+
+
+			
+			
 			animate();
 
 
 			// John R - Twitter Function (pull out a random Tweet)
-			function tweetThis(){
+			function tweetThis(fakeTweets){
 
 				// Here is an array of fakeTweets. We can pull in from a real source later
-				var fakeTweets = ["yo","go","mo","yoyo","gogo","momo","yoyoyo","gg=ogogoog"];
+				//var fakeTweets = ["yo","go","mo","yoyo","gogo","momo","yoyoyo","gg=ogogoog"];
+
+
+			//var realTweets = [];
+
+    
+
+
 
 				// store the total number of tweets. We use this to determine the number of birds later on
 				amountOfTweets = fakeTweets.length;
@@ -34,10 +55,20 @@
 					var randomTweet = fakeTweets[tweetNumber];
 					// Log the random tweet. Finished app should display the Tweet on-screen instead
 					console.log(randomTweet);
+				
+					/*$.ajax({
+					    url: "https://api.twitter.com/1/statuses/oembed.json?id="+randomTweet,
+					            dataType: "jsonp",
+					            success: function(data){
+					                $('#tweet-list').html(data.html);
+					            }
+					        });*/
+
+
 				}
 
 				// Display new tweet every 5 seconds...
-				setInterval(pickRandomTweet, 5000);
+				setInterval(pickRandomTweet, 300000);
 
 			}
 			
@@ -47,7 +78,7 @@
 			function init() {
 
 				camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
-				camera.position.z = 200; // originally 450
+				camera.position.z = 250; // originally 450
 
 				scene = new THREE.Scene();
 

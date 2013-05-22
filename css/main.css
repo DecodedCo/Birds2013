@@ -29,8 +29,21 @@
 	float:left;
 }
 
+#tweet-list {
+	position: absolute;
 
+}
 
+.twitter-tweet {
+	position: absolute;
+	left:0px;
+}
+
+.container {
+	width: 100%;
+	position: relative;
+	opacity: 0.6;
+}
 
 
 
