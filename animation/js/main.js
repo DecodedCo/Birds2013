@@ -69,7 +69,7 @@
 
 				}
 
-				// Display new tweet every 5 seconds...
+				// Display new tweet every minute...
 				setInterval(pickRandomTweet, 300000);
 
 			}
