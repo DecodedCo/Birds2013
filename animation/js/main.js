@@ -14,26 +14,24 @@
 			var amountOfTweets, tweetNumber;
 			var realTweets = [];
 
-			    $.getJSON('/nodejs/data.json', function(data) {
-			        $.each(data, function(index) {
-			            //alert(data[index]);
-			            //alert(data[index].TEST2);
-			            realTweets.push(data[index])
-			        });
+		    $.getJSON('/Birds2013/nodejs/data.json', function(data) {
+		        $.each(data, function(index) {
+		            //alert(data[index]);
+		            //alert(data[index].TEST2);
+		            realTweets.push(data[index])
+		        });
 
-			        
-			        tweetThis(realTweets);
-			        init();
-			    });
+		        console.log(realTweets)
+		        tweetThis(realTweets);
+		        init();
+		    });
 
-
-			
-			
-			animate();
-
+		    
 
 			// John R - Twitter Function (pull out a random Tweet)
 			function tweetThis(fakeTweets){
+
+				//var realTweets = [];
 
 				// store the total number of tweets. We use this to determine the number of birds later on
 				amountOfTweets = fakeTweets.length;
@@ -45,8 +43,7 @@
 					var randomTweet = fakeTweets[tweetNumber];
 					// Log the random tweet. Finished app should display the Tweet on-screen instead
 					console.log(randomTweet);
-
-			$.ajax({
+					$.ajax({
 					    url: "https://api.twitter.com/1/statuses/oembed.json?id="+randomTweet,
 					            dataType: "jsonp",
 					            success: function(data){
@@ -56,17 +53,20 @@
 					        });
 
 
-					
 
 				}
 
 				// Display new tweet every 5 seconds...
-				setInterval(pickRandomTweet, 300000);
+				setInterval(function(){
+					pickRandomTweet();
+
+				}, 300000);
 
 			}
 			
 			
 
+			animate();
 
 			function init() {
 
