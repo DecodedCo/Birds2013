@@ -21,7 +21,7 @@
 			            realTweets.push(data[index])
 			        });
 
-			        
+			        console.log(realTweets);
 			        tweetThis(realTweets);
 			        init();
 			        animate();
