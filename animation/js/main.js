@@ -21,16 +21,15 @@
 			            realTweets.push(data[index])
 			        });
 
-			        console.log(realTweets);
+			        
 			        tweetThis(realTweets);
 			        init();
-			        animate();
 			    });
 
 
 			
 			
-			
+			animate();
 
 
 			// John R - Twitter Function (pull out a random Tweet)
@@ -56,21 +55,14 @@
 					var randomTweet = fakeTweets[tweetNumber];
 					// Log the random tweet. Finished app should display the Tweet on-screen instead
 					console.log(randomTweet);
-				
-					$.ajax({
-					    url: "https://api.twitter.com/1/statuses/oembed.json?id="+randomTweet,
-					            dataType: "jsonp",
-					            success: function(data){
-					            	console.log(data)
-					                $('#tweet-list').html(data.html);
-					            }
-					        });
+
+
 
 
 				}
 
-				// Display new tweet every minute...
-				setInterval(pickRandomTweet, 300000);
+				// Display new tweet every 5 seconds...
+				setInterval(pickRandomTweet, 5000);
 
 			}
 			
