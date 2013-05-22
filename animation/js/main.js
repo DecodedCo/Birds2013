@@ -12,6 +12,7 @@
 			// var stats;
 
 			var amountOfTweets, tweetNumber;
+			tweetNumber = 336845345336213504;
 			var realTweets = [];
 
 		    $.getJSON('/nodejs/data.json', function(data) {
@@ -23,7 +24,8 @@
 
 		        console.log(realTweets)
 		        tweetThis(realTweets);
-		        init();
+				init();
+				animate();	        
 		    });
 
 		    
@@ -35,7 +37,7 @@
 
 				// store the total number of tweets. We use this to determine the number of birds later on
 				amountOfTweets = fakeTweets.length;
-				
+	
 				// Pick a random tweet from our array
 				function pickRandomTweet() {
 					// Store tweetNumber so we can change which bird is highlighted
@@ -54,6 +56,8 @@
 
 
 
+
+
 				}
 
 				// Display new tweet every 5 seconds...
@@ -66,7 +70,7 @@
 			
 			
 
-			animate();
+			
 
 			function init() {
 
