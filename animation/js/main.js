@@ -14,7 +14,7 @@
 			var amountOfTweets, tweetNumber;
 			var realTweets = [];
 
-			    $.getJSON('/nodejs/data.json', function(data) {
+			    $.getJSON('/Birds2013/nodejs/data.json', function(data) {
 			        $.each(data, function(index) {
 			            //alert(data[index]);
 			            //alert(data[index].TEST2);
@@ -24,12 +24,13 @@
 			        
 			        tweetThis(realTweets);
 			        init();
+			        animate();
 			    });
 
 
 			
 			
-			animate();
+			
 
 
 			// John R - Twitter Function (pull out a random Tweet)
@@ -60,6 +61,7 @@
 					    url: "https://api.twitter.com/1/statuses/oembed.json?id="+randomTweet,
 					            dataType: "jsonp",
 					            success: function(data){
+					            	console.log(data)
 					                $('#tweet-list').html(data.html);
 					            }
 					        });
