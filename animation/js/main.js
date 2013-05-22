@@ -14,7 +14,7 @@
 			var amountOfTweets, tweetNumber;
 			var realTweets = [];
 
-			    $.getJSON('/Birds2013/nodejs/data.json', function(data) {
+			    $.getJSON('/nodejs/data.json', function(data) {
 			        $.each(data, function(index) {
 			            //alert(data[index]);
 			            //alert(data[index].TEST2);
@@ -56,13 +56,13 @@
 					// Log the random tweet. Finished app should display the Tweet on-screen instead
 					console.log(randomTweet);
 				
-					/*$.ajax({
+					$.ajax({
 					    url: "https://api.twitter.com/1/statuses/oembed.json?id="+randomTweet,
 					            dataType: "jsonp",
 					            success: function(data){
 					                $('#tweet-list').html(data.html);
 					            }
-					        });*/
+					        });
 
 
 				}

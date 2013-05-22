@@ -25,12 +25,12 @@ $('#video').click(function(){
 	fullScreenVideo('.video-stream');
 })
 
-    $.getJSON('/Birds2013/nodejs/datafinal.json', function(data) {
+    /*$.getJSON('/Birds2013/nodejs/datafinal.json', function(data) {
         $.each(data, function(index) {
             //alert(data[index].TEST1);
             //alert(data[index].TEST2);
         });
-    });
+    });*/
 /*
 $('#tweet-list .tweet').css('opacity',0);
 $('#tweet-list .tweet').each(function(i){
