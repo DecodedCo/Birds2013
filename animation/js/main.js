@@ -14,7 +14,7 @@
 			var amountOfTweets, tweetNumber;
 			var realTweets = [];
 
-		    $.getJSON('/Birds2013/nodejs/data.json', function(data) {
+		    $.getJSON('/nodejs/data.json', function(data) {
 		        $.each(data, function(index) {
 		            //alert(data[index]);
 		            //alert(data[index].TEST2);
