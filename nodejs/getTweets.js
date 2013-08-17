@@ -26,7 +26,7 @@ twitter.get('search/tweets',{q: '#birds2013'}, function(err, data) {
 
 
 
-/*
+
 // Read the data store
 fs.readFile('./data.json', function(error, json){
     // Log any errors
@@ -41,7 +41,7 @@ fs.readFile('./data.json', function(error, json){
         // existingDate[item] = key
         // item = value
 
-        twitter.get('statuses/oembed',{id: item},function(err,data){
+        twitter.get('statuses/oembed.json',{id: item},function(err,data){
             console.log(err);
             if(data != null && typeof data === 'object') {
                 existingData[item] = data;
@@ -57,7 +57,6 @@ fs.readFile('./data.json', function(error, json){
     },5000)
 
 });
-*/
 
 
 
