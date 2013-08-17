@@ -23,6 +23,30 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+        <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+        <script>
+          // ensure the web page (DOM) has loaded
+          document.addEventListener("DOMContentLoaded", function () {
+     
+             // Create a popcorn instance by calling Popcorn("#id-of-my-video")
+             var pop = Popcorn("#birds-video");
+     
+             // add a footnote at 2 seconds, and remove it at 6 seconds
+             pop.footnote({
+               start: 2,
+               end: 6,
+               text: "Pop!",
+               target: "footnotediv"
+             });
+     
+             // play the video right away
+             pop.play();
+     
+          }, false);
+        </script>
+
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -86,7 +110,7 @@
  
 
             <footer>
-            
+                <div id="footnotediv"></div>
             </footer>
 
         </div> <!-- /container -->
