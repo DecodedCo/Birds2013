@@ -11,124 +11,87 @@
         <meta name="viewport" content="width=device-width">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
-
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
         <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
         <script>
-          // ensure the web page (DOM) has loaded
-          document.addEventListener("DOMContentLoaded", function () {
-     
-             // Create a popcorn instance by calling Popcorn("#id-of-my-video")
-             var pop = Popcorn("#birds-video");
-     
-             // add a footnote at 2 seconds, and remove it at 6 seconds
-             pop.footnote({
-               start: 2,
-               end: 6,
-               text: "Pop!",
-               target: "footnotediv"
-             });
-     
-             // play the video right away
-             pop.play();
-     
-          }, false);
+
+         // ensure the web page (DOM) has loaded
+              document.addEventListener("DOMContentLoaded", function () {
+         
+                   // Create a popcorn instance by calling the Youtube player plugin
+                 var birds = Popcorn.youtube(
+                   '#video-container',
+                   'http://www.youtube.com/watch?v=PFB_D_Cztvo' );
+       
+                 // play the video right away
+                birds.play();
+    
+                birds.on("pause",function(){
+                    console.log('paused!')
+                    alert('it\'s paused')
+                })
+
+                birds.code({
+                    start: 2,
+                    onStart: function() {
+                        displayTweet("330006945127886848");
+                    },
+                    onEnd: function() {
+                        
+                    }
+                });
+
+                birds.code({
+                    start: 10,
+                    onStart: function() {
+                        displayTweet("381130003653488640");
+                    },
+                    onEnd: function() {
+                        
+                    }
+                });
+
+                 // add a footnote at 2 seconds, and remove it at 6 seconds
+                birds.footnote({
+                    start: 2,
+                    end: 6,
+                    text: "Pop!",
+                    target: "footnotediv"
+                 });
+
+
+              }, false);
+ 
         </script>
-
-
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <section id="wrapper" class="clearfix">
+            <div id="meta-container">
+                <div id="content-stream">
+                    
+                    fxgdfg
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">#Birds2013</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li><a href="about.html">About Birds 2013</a></li>
-                
-                           <!-- <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>-->
-                        </ul>
-                    </div><!--/.nav-collapse -->
                 </div>
+                <div id="target"></div>
+                <footer>
+                    <div id="footnotediv"></div>
+                </footer>
+            </div> <!-- /container -->
+            <div id="video-container">
+                <p>hello</p>
+
             </div>
-        </div>
-
-
-
-<video class="video-stream" id="birds-video" width="864" height="512" preload controls autoplay>
-    <source src="media/Birds.mov" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-    <!--<source src="HTML5Sample_Ogg.ogv" type='video/ogg; codecs="theora, vorbis"' />-->
-    <!--<source src="HTML5Sample_WebM.webm" type='video/webm; codecs="vp8, vorbis"' />-->
-</video>
-
-        <div class="container">
- 
- 
-<div id="tweet-list">
-
-
-
-</div><!-- / #tweet-list -->
- 
- 
-<div id="target"></div>
-
-
- 
-
-            <footer>
-                <div id="footnotediv"></div>
-            </footer>
-
-        </div> <!-- /container -->
-
-
+        </section>
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Source code adapted from http://mrdoob.github.io/three.js/examples/canvas_geometry_birds.html -->
-        <script src="animation/js/three.min.js"></script>
-        <script src="animation/js/Bird.js"></script>
-        <script src="animation/js/stats.min.js"></script>
-        <script src="animation/js/Boid.js"></script>
-        <script src="animation/js/main.js"></script>
-
-
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
