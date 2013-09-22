@@ -8,48 +8,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
  // play the video right away
 birds.play();
+birds.trigger("mute");
 
 birds.on("pause",function(){
  
 })
 
 birds.code({
-    start: 2,
+    start: 5,
+    end: 25,
     onStart: function() {
-        displayTweet("330006945127886848");
+        displayTweet("20");
     },
-    onEnd: function() {
-        
+    onEnd: function() { 
+        removeTweet()
     }
 });
 
+birds.code({
+    start: 2,
+    end: 20,
+    onStart: function() {
+        addYoutube("En_2T7KH6RA");
+    },
+    onEnd: function() { 
+        removeYoutube();
+    }
+});
+
+birds.code({
+    start: 140,
+    end: 160,
+    onStart: function() {
+        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
+    },
+    onEnd: function() { 
+        removeIframe("inourtime");
+    }
+});
+
+
+
 birds.wikipedia({
-  start: 0,
-  end: 10,
+  start:50,
+  end: 60,
   src: "http://en.wikipedia.org/wiki/Vannevar_Bush",
   title: "Vannevar Bush",
   target: "wikidiv"
 });
-
-
-birds.code({
-    start: 10,
-    onStart: function() {
-        displayTweet("381130003653488640");
-    },
-    onEnd: function() {
-        
-    }
-});
-
-
-birds.lastfm({
-      start: 5,
-      end: 15,
-      artist: "yacht",
-      target: "lastfmdiv",
-      apikey: "30ac38340e8be75f9268727cb4526b3d"
-     });
 
  // add a footnote at 2 seconds, and remove it at 6 seconds
 birds.footnote({
