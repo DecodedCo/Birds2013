@@ -18,72 +18,22 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
-        <script>
-
-            // ensure the web page (DOM) has loaded
-              document.addEventListener("DOMContentLoaded", function () {
-         
-                   // Create a popcorn instance by calling the Youtube player plugin
-                 var birds = Popcorn.youtube(
-                   '#video-container',
-                   'http://www.youtube.com/watch?v=DBl7u8PIbUM' );
-       
-                 // play the video right away
-                birds.play();
-    
-                birds.on("pause",function(){
-                    console.log('paused!')
-                    alert('it\'s paused')
-                })
-
-                birds.code({
-                    start: 2,
-                    onStart: function() {
-                        displayTweet("330006945127886848");
-                    },
-                    onEnd: function() {
-                        
-                    }
-                });
-
-                birds.code({
-                    start: 10,
-                    onStart: function() {
-                        displayTweet("381130003653488640");
-                    },
-                    onEnd: function() {
-                        
-                    }
-                });
-
-                 // add a footnote at 2 seconds, and remove it at 6 seconds
-                birds.footnote({
-                    start: 2,
-                    end: 6,
-                    text: "Pop!",
-                    target: "footnotediv"
-                 });
-
-
-              }, false);
- 
-        </script>
+        <script src="js/timeline.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <h1>sdfsdf</h1>
-    </nav>
-
+ 
         <section id="wrapper" class="clearfix">
-            <div id="meta-container">
+
+<iframe class="external-website" src="http://info.cern.ch"></iframe>
+ 
                 <div id="content-stream">
+
+                    <div id="wikidiv" class="transparent-box"></div>
                     
-                    fxgdfg
+                   
 
 
                 </div>
@@ -91,9 +41,9 @@
                 <footer>
                     <div id="footnotediv"></div>
                 </footer>
-            </div> <!-- /container -->
+ 
             <div id="video-container">
-                <p>hello</p>
+   
 
             </div>
         </section>

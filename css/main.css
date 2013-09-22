@@ -22,20 +22,14 @@ z-index: -9;
 	float: left;
 }
 
-#meta-container {
-	width: 360px;
-	height: 100%;
-	float: left;
-}
-
+ 
 #video-container {
-	width: 70%;
-	float: right;
-	position: relative;
+	width: 100%;
 	height: 100%;
 	position: absolute;
 	right: 0px;
 	top: 0px;
+	z-index: 1;
 }
 
 .full-size #video-container {
@@ -77,7 +71,24 @@ z-index: -9;
 
 
 
+.external-website {
+	width: 480px;
+	height: 480px;
+	position: absolute;
+	z-index: 999;
+	background: white;
+	background: rgba(255,255,255,0.8);
 
+}
+#wikidiv {
+	position: absolute;
+	z-index: 999;
+	right: 0px;
+	top: 0;
+}
 
-
-
+.transparent-box {
+	background: rgba(255,255,255,0.8);
+	width: 22em;
+	padding: 1.6em;	
+}
