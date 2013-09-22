@@ -14,7 +14,73 @@ birds.on("pause",function(){
  
 })
 
- 
+/*
+
+Start editing here:
+
+(although do feel free to play with the above, and all of it!)
+
+*/
+
+
+
+
+// This adds a tweet
+birds.code({
+    start: 5,
+    end: 25,
+    onStart: function() {
+        displayTweet("281255240811036673");
+    },
+    onEnd: function() { 
+        removeTweet()
+    }
+});
+
+// Adds a YouTube video for the amount of time specified. 
+// http://www.youtube.com/watch?v=En_2T7KH6RA
+// The argument the addYoutube fn takes is the ID from the YouTube video
+
+birds.code({
+    start: 2,
+    end: 20,
+    onStart: function() {
+        addYoutube("En_2T7KH6RA");
+    },
+    onEnd: function() { 
+        removeYoutube();
+    }
+});
+
+// Adds a website in an iframe
+// addIframe accepts three parameters: URL of site, title to display on page, and:
+// third parameter is an ID that you make up so the removeIframe function knows which one to remove
+
+birds.code({
+    start: 140,
+    end: 160,
+    onStart: function() {
+        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
+    },
+    onEnd: function() { 
+        removeIframe("inourtime");
+    }
+});
+
+// Wikipedia article
+// Link and Title of article.
+
+birds.wikipedia({
+  start:50,
+  end: 60,
+  src: "http://en.wikipedia.org/wiki/Vannevar_Bush",
+  title: "Vannevar Bush",
+  target: "wikidiv" // this corresponds to the <div id="wikidiv"></div> in the HTML page
+});
+
+
+
+
 
 birds.code({
     start: 2131,
@@ -247,6 +313,7 @@ birds.code({
         removeTweet()
     }
 });
+
 birds.code({
     start: 5102,
     end: 5112,
@@ -256,57 +323,7 @@ birds.code({
     onEnd: function() {
         removeTweet()
     }
-});
-
-
-birds.code({
-    start: 5,
-    end: 25,
-    onStart: function() {
-        displayTweet("281255240811036673");
-    },
-    onEnd: function() { 
-        removeTweet()
-    }
-});
-
-birds.code({
-    start: 2,
-    end: 20,
-    onStart: function() {
-        addYoutube("En_2T7KH6RA");
-    },
-    onEnd: function() { 
-        removeYoutube();
-    }
-});
-
-birds.code({
-    start: 140,
-    end: 160,
-    onStart: function() {
-        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
-    },
-    onEnd: function() { 
-        removeIframe("inourtime");
-    }
-});
-
-
-
-birds.wikipedia({
-  start:50,
-  end: 60,
-  src: "http://en.wikipedia.org/wiki/Vannevar_Bush",
-  title: "Vannevar Bush",
-  target: "wikidiv"
-});
-
-
-
-
-
-  
+}); 
 
 
 

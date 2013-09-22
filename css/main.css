@@ -50,9 +50,6 @@ z-index: -9;
 	height: 100%;
 }
 
- 
-
-
 .navbar-fixed-top {
  
 }
@@ -83,7 +80,6 @@ z-index: -9;
 	height: 270px;
 }
 
-
 .external-website {
 	width: 480px;
 	height: 480px;
@@ -100,10 +96,11 @@ z-index: -9;
  	height: 480px;
 
 }
+/* These are the styles for the wikipedia div: */
 #wikidiv {
 	position: absolute;
 	z-index: 999;
-	right: 0px;
+	left: 0px;
 	top: 0;
 }
 
@@ -111,4 +108,13 @@ z-index: -9;
 	background: rgba(255,255,255,0.8);
 	width: 22em;
 	padding: 1.6em;	
+}
+
+.social {
+	position: absolute;
+	z-index: 999;
+	background: rgba(255,255,255,0.8);
+	top: 0px;
+	right: 0px;
+	padding: 0.25em 0.1em;
 }
