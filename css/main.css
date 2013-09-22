@@ -56,8 +56,7 @@ z-index: -9;
 
 
 .navbar-fixed-top {
-	top: auto;
-	bottom: 0px;
+ 
 }
 
 .content-stream blockquote {
@@ -75,6 +74,8 @@ z-index: -9;
 	position: relative;
 	left:0px;
 }
+
+
 
 
 
