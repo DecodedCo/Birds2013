@@ -22,17 +22,14 @@ Start editing here:
 
 */
 
-
-
-
 // This adds a tweet
 birds.code({
-    start: 5,
-    end: 25,
+    start: 2131,
+    end: 2141,
     onStart: function() {
-        displayTweet("281255240811036673");
+        displayTweet("20");
     },
-    onEnd: function() { 
+    onEnd: function() {
         removeTweet()
     }
 });
@@ -42,8 +39,8 @@ birds.code({
 // The argument the addYoutube fn takes is the ID from the YouTube video
 
 birds.code({
-    start: 2,
-    end: 20,
+    start: 706,
+    end: 1165,
     onStart: function() {
         addYoutube("En_2T7KH6RA");
     },
@@ -79,19 +76,6 @@ birds.wikipedia({
 });
 
 
-
-
-
-birds.code({
-    start: 2131,
-    end: 2141,
-    onStart: function() {
-        displayTweet("20");
-    },
-    onEnd: function() {
-        removeTweet()
-    }
-});
 
 birds.code({
     start: 3332,
