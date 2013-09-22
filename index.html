@@ -6,213 +6,40 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Birds2013</title>
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
-
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+        <script src="js/timeline.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">#Birds2013</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li><a href="about.html">About Birds 2013</a></li>
-                
-                           <!-- <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>-->
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
+         <section id="wrapper" class="clearfix">
+            <div id="wikidiv" class="transparent-box"></div>
+            <div class="twitterdiv"></div>
+            <div class="youtube-wrapper"></div>
+            <div id="video-container"></div>
+        </section>
 
-<iframe class="video-stream" src="http://www.ustream.tv/embed/9801809?autoplay=true" width="864" height="512" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
-        <div class="container">
- 
- 
-<div id="tweet-list">
-
-
-
-</div><!-- / #tweet-list -->
-<!--
-  jQuery(document).ready(function() 
-
-
-  {jQuery.getJSON("https://api.twitter.com/1/statuses/oembed.json?id=133640144317198338&align=center&callback=?", function(data)
-    {jQuery('#target').html(data.html);
-    });
-  });
--->
- 
-<div id="target"></div>
-
-
-
-
-
-            <div class="row tweet-stream" style="display: none">
-                tweets used in order
-
-
-p23 just setting up my twttr 7:32 PM Apr 28th 2008 
-part3 
-p1  @danielkelly645
-@Tweetsmarter: What #instagram's New Terms of Service mean for You nyti.ms/V3Td6B r/t #birds2012
-https://twitter.com/TweetSmarter/status/281255240811036673
-
-‏@MrtsAndLndy 
-New #Instagram policies kick in on Saturday - http://j.mp/W5tbNC 
-https://twitter.com/MrtsAndLndy/status/291236153296826368
-
-‏@Entropy1024 
-#Instagram loses half of users. This is good news as should make other platforms think before changing Ts&Cs - http://www.wired.co.uk/news/archive/2013-01/15/instagram-losing-daily-users …https://twitter.com/entropy1024/status/291252755975266304
-
-@GirlCalledWasp @HuffPostTech: Instagram wants you to know they are gaining users, not losing them http://t.co/APNWdE8a (RT) Sat Jan 19 17:25:15 +0000 2013
-
-RT @viviantia: Many people still disappointed by @instagram attempt to change their terms. @sionfullana have not use it since #SMWvisual ... Tue Feb 19 21:37:27 +0000 2013
-
-‏@piinksparkles 
-Waking up to 10k followers on #instagram instantly made my day! #thankyou 
-https://twitter.com/piinksparkles/status/291937593887690753
-
-
-‏@MrJackLowe 
-Like other photographers I know, love and respect, it's sadly time to bid adieu to #Instagram tomorrow… http://thedambook.com/blog/2013/01/instagram-terms-still-terrible/#more-1048 … @instagram 
-Thu Jan 17 17:10:47 +0000 2013
-
-‏@TweetSmarter 
-There's a new, worldwide economy—The Share Economy: 
-
-@TomParker81
-
-I love how everyone's so irate about #Instagram. Trust me, no one is that interested in your pictures of burgers, fixes and sunsets Wed Dec 19 07:52:54 +0000 2012
-
-
-@digallo 
-
-new #instagram stats: 90 million monthly active users, 40 million pics per day + 1000 comments per second… yikes! http://t.co/nYlD7yvz Fri Jan 18 12:49:00 +0000 2013
-
-
-tattydevine 
-What do you think about these pieces that Claire's Accessories are selling? http://t.co/dy8etbTM @ClairesStores http://t.co/b2V3Ru6q 6:32 PM Feb 22nd from web
-
-22 Feb Rowan | KitschenSink ‏ @KitschenSink 
-@StayGoldMRose @tattydivine @MagasinxStitch who ever they employed to 'design' is a div, and Claire's don't know their market, clearly.
-
-tattydevine 
-@beattiedee Hi Lucy, if you're able to get some photos for us that would be really useful. We'll go on a shopping trip ourselves too... 6:43 PM Feb 22nd from web
-
-
-wheatles 
-Now, I'm no palaeontologist, but these look pretty similar http://t.co/PY73P5ag (@tattydevine's fossil on the left @clairesstores on right) 6:59 PM Feb 22nd from Twitterrific
-
-tattydevine 
-@wheatles Thanks for giving us the only 'lol' we've had over this situation!
-7:16 PM Feb 22nd from web
-
-tattydevine 
-Latest: @ClairesStores appear to have deleted posts from their Facebook wall and removed the ability to post. (Our wall? Always open.) 8:55 PM Feb 22nd from Twitter for iPhone
-
-tattydevine 
-Thank you for all the twitter support over this http://t.co/dy8etbTM 8:30 PM Feb 22nd
-
-tattydevine 
-We've just spoken to our lawyer. We can't say much more, but we're taking this very seriously. http://t.co/dy8etbTM 11:17 AM Feb 23rd from web 
-tattydevine Thank you to everyone for all the comments and support. We'll let you know how we get on. . . 7:55 AM Feb 23rd from Twitter for iPhone
-
-
-RT @VentnorVacation: Dear @ClairesStores: Do hope you've withdrawn your @TattyDivine rip offs
-
-tattydevine @ameliagregory In case you missed it last night... You need to see these pics of Claire's Accessories' current range: http://t.co/dy8etbTM 11:53 AM Feb 23rd from web
-23 Feb icholson ‏ @Kitty_Pickle 
-.@ClairesStores get real! Think about a response to @tattydivine & customers who are boycotting you! Not tweeting about tights!
-
-tattydevine @laurenlaverne @ianbetteridge Thanks for the RT Lauren - we are listening to you in the studio this morning! x 12:33 PM Feb 23rd from web
-
-tattydevine 'Tatty Devine' is now trending in London. But you knew that anyway. 5:21 PM Feb 23rd from web
-
-tattydevine The amazing response to our blog about @ClairesStores has created a traffic spike so big, our website is temporarily down. #workingonit 12:47 PM Feb 23rd from web
-
-tattydevine Claire's Accessories have now given a statement to @StylistMagazine: http://t.co/1QzgOSJM 5:16 PM Feb 23rd from web
-
-
-tattydevine 
-Big piece on the Tatty Devine/Claire's Accessories story in today's Metro @MetroUK and on the BBC News website @BBCNews http://t.co/jvnCLrP5 7:51 AM Feb 24th from Twitter for iPhone
-
-
-tattydevine All this press attention means our site may occasionally be down today. We are working on an upgrade, and you can also order on 02077399009. 10:50 AM Feb 24th from web
-
-tattydevine Rosie will be on @BBCRadio4's You and Yours show tomorrow from 12 noon, talking about the Claire's Accessories story. http://t.co/dy8etbTM 11:28 AM Feb 28th from w
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-            <footer>
-            
-            </footer>
-
-        </div> <!-- /container -->
 
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Source code adapted from http://mrdoob.github.io/three.js/examples/canvas_geometry_birds.html -->
-        <script src="animation/js/three.min.js"></script>
-        <script src="animation/js/Bird.js"></script>
-        <script src="animation/js/stats.min.js"></script>
-        <script src="animation/js/Boid.js"></script>
-        <script src="animation/js/main.js"></script>
-
-
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="tweets.js"></script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
