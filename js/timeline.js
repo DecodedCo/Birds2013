@@ -4,11 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
    // Create a popcorn instance by calling the Youtube player plugin
 birds = Popcorn.youtube(
    '#video-container',
-   'http://www.youtube.com/watch?v=DBl7u8PIbUM' );
+   'http://www.youtube.com/watch?v=DBl7u8PIbUM&' );
 
  // play the video right away
 birds.play();
-birds.trigger("mute");
+
+var startTime = Math.floor(Math.random() * 5280) + 1;
+
+birds.exec( 0, function() {
+    this.mute();
+});
+
+birds.exec( 5, function() {
+    this.play( startTime );
+    this.unmute();
+});
 
 birds.on("pause",function(){
  
