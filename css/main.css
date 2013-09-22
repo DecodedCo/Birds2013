@@ -93,6 +93,7 @@ z-index: -9;
 	z-index: 999;
  	background: white;
 	background: rgba(255,255,255,0.8);	
+	opacity: 0.8;
 }
 .external-website iframe {
  	width: 100%;

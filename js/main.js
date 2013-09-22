@@ -40,6 +40,7 @@ function resizeLayout() {
 }
 
 function displayTweet(tweetID) {
+	console.log('now!')
 	$.ajax({
 	    url: "https://api.twitter.com/1/statuses/oembed.json?id="+tweetID,
 	            dataType: "jsonp",
