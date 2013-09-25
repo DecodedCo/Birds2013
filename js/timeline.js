@@ -64,13 +64,13 @@ birds.code({
 // third parameter is an ID that you make up so the removeIframe function knows which one to remove
 
 birds.code({
-    start: 140,
-    end: 160,
+    start: 2955,
+    end: 2970,
     onStart: function() {
-        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
+        addIframe("http://www.cabinetmagazine.org/issues/13/rosenberg.php","Hummingbird Futures by Daniel Rosenberg from Cabinet Spring 2004","cabinet");
     },
     onEnd: function() { 
-        removeIframe("inourtime");
+        removeIframe("cabinet");
     }
 });
 
@@ -85,6 +85,70 @@ birds.wikipedia({
   target: "wikidiv" // this corresponds to the <div id="wikidiv"></div> in the HTML page
 });
 
+//Daniels inserts starts here
+
+birds.code({
+    start: 140,
+    end: 160,
+    onStart: function() {
+        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
+    },
+    onEnd: function() { 
+        removeIframe("inourtime");
+    }
+});
+
+birds.code({
+    start: 3070,
+    end: 3085,
+    onStart: function() {
+        addIframe("https://sites.google.com/site/greekdemocracyanddrama/home/greek-drama/comedy","Greek Comedy","greekcomedy");
+    },
+    onEnd: function() { 
+        removeIframe("greekcomedy");
+    }
+});
+
+
+birds.code({
+    start: 4007,
+    end: 4017,
+    onStart: function() {
+        addIframe("http://www.patrickcoyle.info/","PatrickCoyle.info","Pat");
+    },
+    onEnd: function() { 
+        removeIframe("Pat");
+    }
+});
+
+birds.code({
+    start: 4056,
+    end: 4066,
+    onStart: function() {
+        addIframe("http://www.bbc.co.uk/iplayer/","iPlayer","iplayer");
+    },
+    onEnd: function() { 
+        removeIframe("iplayer");
+    }
+});
+birds.wikipedia({
+  start:4072,
+  end: 4082,
+  src: "http://en.wikipedia.org/wiki/Main_Page",
+  title: "Main Page",
+  target: "wikidiv" 
+});
+
+birds.code({
+    start: 4117,
+    end: 4147,
+    onStart: function() {
+        addIframe("http://www.lrb.co.uk/v33/n19/daniel-soar/it-knows","It Knows by Daniel Soar. London Review of Books 6 October 2011", "lrb");
+    },
+    onEnd: function() { 
+        removeIframe("lrb");
+    }
+});
 birds.code({
     start: 122,
     end: 137,
