@@ -1,38 +1,15 @@
-// ensure the web page (DOM) has loaded
-document.addEventListener("DOMContentLoaded", function () {
 
-   // Create a popcorn instance by calling the Youtube player plugin
-birds = Popcorn.youtube(
-   '#video-container',
-   'http://www.youtube.com/watch?v=DBl7u8PIbUM&' );
-
- // play the video right away
-birds.play();
-
-var startTime = Math.floor(Math.random() * 5280) + 1;
-
-birds.exec( 0, function() {
-    this.mute();
+birds.code({
+    start: 10,
+    end: 15,
+    onStart: function() {
+        displayTweet("381130003653488640");
+    },
+    onEnd: function() {
+        removeTweet()
+    }
 });
 
-birds.exec( 5, function() {
-    this.play( startTime );
-    this.unmute();
-});
-
-birds.on("pause",function(){
- 
-})
-
-/*
-
-Start editing here:
-
-(although do feel free to play with the above, and all of it!)
-
-*/
-
-// This adds a tweet
 birds.code({
     start: 2131,
     end: 2141,
@@ -43,60 +20,6 @@ birds.code({
         removeTweet()
     }
 });
-
-// Adds a YouTube video for the amount of time specified. 
-// http://www.youtube.com/watch?v=En_2T7KH6RA
-// The argument the addYoutube fn takes is the ID from the YouTube video
-
-birds.code({
-    start: 706,
-    end: 1165,
-    onStart: function() {
-        addYoutube("En_2T7KH6RA");
-    },
-    onEnd: function() { 
-        removeYoutube();
-    }
-});
-
-// Adds a website in an iframe
-// addIframe accepts three parameters: URL of site, title to display on page, and:
-// third parameter is an ID that you make up so the removeIframe function knows which one to remove
-
-birds.code({
-    start: 140,
-    end: 160,
-    onStart: function() {
-        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
-    },
-    onEnd: function() { 
-        removeIframe("inourtime");
-    }
-});
-
-// Wikipedia article
-// Link and Title of article.
-
-birds.wikipedia({
-  start:50,
-  end: 60,
-  src: "http://en.wikipedia.org/wiki/Vannevar_Bush",
-  title: "Vannevar Bush",
-  target: "wikidiv" // this corresponds to the <div id="wikidiv"></div> in the HTML page
-});
-
-birds.code({
-    start: 122,
-    end: 137,
-    onStart: function() {
-        addIframe("http://hyperland.com/","Ted Nelsons Hyperland.com","hyperland");
-    },
-    onEnd: function() { 
-        removeIframe("hyperland");
-    }
-});
-
-
 birds.code({
     start: 3332,
     end: 3342,
@@ -317,7 +240,6 @@ birds.code({
         removeTweet()
     }
 });
-
 birds.code({
     start: 5102,
     end: 5112,
@@ -327,9 +249,5 @@ birds.code({
     onEnd: function() {
         removeTweet()
     }
-}); 
-
-
-
-
-}, false);
+});
+  
