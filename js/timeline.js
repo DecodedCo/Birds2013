@@ -62,17 +62,17 @@ birds.code({
 // Adds a website in an iframe
 // addIframe accepts three parameters: URL of site, title to display on page, and:
 // third parameter is an ID that you make up so the removeIframe function knows which one to remove
-
 birds.code({
-    start: 2955,
-    end: 2970,
+    start: 140,
+    end: 160,
     onStart: function() {
-        addIframe("http://www.cabinetmagazine.org/issues/13/rosenberg.php","Hummingbird Futures by Daniel Rosenberg from Cabinet Spring 2004","cabinet");
+        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
     },
     onEnd: function() { 
-        removeIframe("cabinet");
+        removeIframe("inourtime");
     }
 });
+
 
 // Wikipedia article
 // Link and Title of article.
@@ -88,13 +88,126 @@ birds.wikipedia({
 //Daniels inserts starts here
 
 birds.code({
+    start: 279,
+    end: 289,
+    onStart: function() {
+        addIframe("http://www.thocp.net/biographies/licklidder_jcr.html","J C R Licklidder","JCRLbio");
+    },
+    onEnd: function() { 
+        removeIframe("JCRLbio");
+    }
+});
+birds.code({
+    start: 716,
+    end: 729,
+    onStart: function() {
+        addIframe("http://www.w3.org/People/Berners-Lee/","Tim Berners-Lee","tbl");
+    },
+    onEnd: function() { 
+        removeIframe("tbl");
+    }
+});
+birds.code({
+    start: 818,
+    end: 830,
+    onStart: function() {
+        addIframe("http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/","As We May Think. Vannevar Bush","aswemaythink");
+    },
+    onEnd: function() { 
+        removeIframe("aswemaythink");
+    }
+});
+birds.code({
+    start: 859,
+    end: 869,
+    onStart: function() {
+        addIframe("http://www.kurzweilai.net/memorandum-for-members-and-affiliates-of-the-intergalactic-computer-network","
+Memorandum For Members and Affiliates of the Intergalactic Computer Network. J C R Licklider","JCRmemo");
+    },
+    onEnd: function() { 
+        removeIframe("JCRmemo");
+    }
+});
+
+birds.code({
+    start: 1068,
+    end: 1080,
+    onStart: function() {
+        addIframe("http://www.britannica.com/EBchecked/topic/86116/Vannevar-Bush","Vannevar Bush","Vannevarbush2");
+    },
+    onEnd: function() { 
+        removeIframe("Vannevarbush2");
+    }
+});
+
+birds.code({
+    start: 1104,
+    end: 1116,
+    onStart: function() {
+        addIframe("http://www.wholeearth.com/index.php","Whole Earth Catalogue","wholeearth");
+    },
+    onEnd: function() { 
+        removeIframe("wholeearth");
+    }
+});
+
+birds.code({
     start: 140,
     end: 160,
     onStart: function() {
-        addIframe("http://bbc.co.uk/programmes/p003c1d3","In our time: Comedy in Ancient Greek Theatre","inourtime");
+        addIframe("https://vimeo.com/45449178","Van Dyke Parks on Discover Aerica","vdpvid");
     },
     onEnd: function() { 
-        removeIframe("inourtime");
+        removeIframe("vdpvid");
+    }
+});
+
+birds.wikipedia({
+  start:1480,
+  end: 1490,
+  src: "http://en.wikipedia.org/wiki/Van_Dyke_Parks",
+  title: "Van Dyke Parks",
+  target: "wikidiv" // this corresponds to the <div id="wikidiv"></div> in the HTML page
+});
+birds.code({
+    start: 1739,
+    end: 1753,
+    onStart: function() {
+        addIframe("http://info.cern.ch/","info.cern.ch","info.cern");
+    },
+    onEnd: function() { 
+        removeIframe("info.cern");
+    }
+});
+birds.code({
+    start: 2395,
+    end: 2405,
+    onStart: function() {
+        addIframe("https://soundcloud.com/das_hund","Das Hund Soundcloud","dashundsoundcloud");
+    },
+    onEnd: function() { 
+        removeIframe("dashundsoundcloud");
+    }
+});
+
+birds.code({
+    start: 2763,
+    end: 2778,
+    onStart: function() {
+        addIframe("http://www.wired.com/wired/archive/3.06/xanadu_pr.html","The Curse of Xanadu by Gary Wolf. Wired.com","wired");
+    },
+    onEnd: function() { 
+        removeIframe("wired");
+    }
+});
+birds.code({
+    start: 2955,
+    end: 2970,
+    onStart: function() {
+        addIframe("http://www.cabinetmagazine.org/issues/13/rosenberg.php","Hummingbird Futures by Daniel Rosenberg from Cabinet Spring 2004","cabinet");
+    },
+    onEnd: function() { 
+        removeIframe("cabinet");
     }
 });
 
