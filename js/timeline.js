@@ -121,8 +121,7 @@ birds.code({
     start: 859,
     end: 869,
     onStart: function() {
-        addIframe("http://www.kurzweilai.net/memorandum-for-members-and-affiliates-of-the-intergalactic-computer-network","
-Memorandum For Members and Affiliates of the Intergalactic Computer Network. J C R Licklider","JCRmemo");
+        addIframe("http://www.kurzweilai.net/memorandum-for-members-and-affiliates-of-the-intergalactic-computer-network","Memorandum For Members and Affiliates of the Intergalactic Computer Network. J C R Licklider","JCRmemo");
     },
     onEnd: function() { 
         removeIframe("JCRmemo");
